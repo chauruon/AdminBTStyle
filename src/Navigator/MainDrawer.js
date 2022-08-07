@@ -51,7 +51,7 @@ import OrdersRouter from "../Router/OrdersRouter";
 import StatisticRouter from "./../Router/StatisticRouter";
 import UserRouter from "./../Router/UserRouter";
 import Order from "@mui/icons-material/LocalMall";
-import logo from '../assets/images/logoArt.png'
+import logo from '../assets/images/logoBTStyle.png'
 const drawerWidth = 240;
 
 //sửa đúng cấu trúc để thêm screen to navigate
@@ -83,18 +83,6 @@ const data = [
       },
     ],
   },
-  // {
-  //   id: "2",
-  //   icon: <Category style={{ color: "#8D6E63" }} />,
-  //   label: "Loại sản phẩm",
-  //   data: [
-  //     {
-  //       label: "Tất cả loại sản phẩm",
-  //       icon: <AllCategory style={{ color: "#8D6E63" }} />,
-  //       page: "/MainDrawer/qltheloai/theloai",
-  //     },
-  //   ],
-  // },
   {
     id: "3",
     icon: <Customer style={{ color: "#8D6E63" }} />,
@@ -369,9 +357,9 @@ function MainDrawer(props) {
   const drawer = (
     //Logo ArtWear(ben trai man hinh)
     <div>
-      <div style={{ height: "0%", marginLeft: "30%" }}>
+      <div style={{ height: "0%", marginLeft: "30%",backgroundColor:"#5D8C92"}}>
         <img
-          style={{ height: "64px", width: "86px" }}
+          style={{ height: "64px", width: "86px",backgroundColor:"#5D8C92" }}
           src={logo}
         />
       </div>
@@ -387,7 +375,7 @@ function MainDrawer(props) {
             id="nested-list-subheader"
             sx={{ fontWeight: "bold", fontSize: "20px", color: "black" }}
           >
-            Cửa hàng ArtWear
+            Cửa hàng BTStyle
           </ListSubheader>
         }
       >
