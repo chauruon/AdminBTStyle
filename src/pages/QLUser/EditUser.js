@@ -16,6 +16,8 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import { styled } from "@mui/material/styles";
 import { parseImgCloudinaryUser } from "../../Handler/handlerCloudinary";
+import baseUrl from "../../assets/common/baseUrl"
+
 const InputFile = styled("input")({
     display: "none",
 });
@@ -60,7 +62,7 @@ const EditUser = () => {
     }, []);
 
     const loadUser = async () => {
-        const result = await axios.get(`http://localhost:3000/api/v1/users/${id}`);
+        const result = await axios.get(`${baseUrl}/users/${id}`);
         setUser(result.data);
     };
 
@@ -69,7 +71,7 @@ const EditUser = () => {
         let mainImg;
         const linkImg = await parseImgCloudinaryUser(FileImage.imagePreviewUrl);
         mainImg = linkImg;
-        fetch(`http://localhost:3000/api/v1/users/update/${id}`, {
+        fetch(`${baseUrl}/users/update/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

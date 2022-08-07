@@ -2,7 +2,7 @@ import "./Message.css";
 import { format } from "timeago.js";
 import { createContext, useReducer, useEffect, useState, useContext } from 'react';
 import axios from "axios";
-
+import baseUrl from '../../assets/common/baseUrl'
 export default function Message({ own, message, currentUser }) {
 
   console.log("id admin ne", message.sender)
@@ -10,7 +10,7 @@ export default function Message({ own, message, currentUser }) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/v1/users/` + message.sender)
+      .get(`${baseUrl}/users/${message.sender}`)
       .then(res => {
         console.log("tat ca nguoi dung", res.data)
         setUser(res.data)

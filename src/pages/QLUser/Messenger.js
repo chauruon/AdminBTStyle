@@ -5,7 +5,9 @@ import Message from "../../components/Message/Message";
 import ChatOnline from "../../components/ChatOnline/ChatOnline";
 import { useLogin } from '../../Context/AuthContext';
 import axios from "axios";
-import { io } from "socket.io-client"
+import { io } from "socket.io-client";
+import baseUrl from "../../assets/common/baseUrl";
+
 export default function Messenger() {
     const [conversations, setConversations] = useState([]);
     const [currentChat, setCurrentChat] = useState(null);
@@ -51,7 +53,7 @@ export default function Messenger() {
     useEffect(() => {
         const getConversations = async () => {
             try {
-                const res = await axios.get("http://localhost:3000/api/v1/conversation/" + profile._id);
+                const res = await axios.get(`${baseUrl}/conversation/${profile._id}`);
                 console.log("list ne", res)
                 setConversations(res.data);
             } catch (err) {
@@ -65,7 +67,7 @@ export default function Messenger() {
     useEffect(() => {
         const getMessages = async () => {
             try {
-                const res = await axios.get("http://localhost:3000/api/v1/message/" + currentChat?._id);
+                const res = await axios.get(`${baseUrl}/message/${currentChat?._id}`);
                 setMessages(res.data);
             } catch (err) {
                 console.log(err);
@@ -96,7 +98,7 @@ export default function Messenger() {
         });
 
         try {
-            const res = await axios.post("http://localhost:3000/api/v1/message", message);
+            const res = await axios.post(`${baseUrl}/message`, message);
             setMessages([...messages, res.data]);
             setNewMessage("");
         } catch (err) {

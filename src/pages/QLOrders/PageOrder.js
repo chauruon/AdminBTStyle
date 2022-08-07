@@ -1,109 +1,3 @@
-// import React, { useState, useEffect } from "react";
-// import axios from "axios";
-// import { Link } from "react-router-dom";
-// import "../QLOrders/QLOrder.css";
-// import Button from "@mui/material/Button";
-// import { height } from "@mui/system";
-// const PageOrder = () => {
-//     const [orders, setOrder] = useState([]);
-
-//     useEffect(() => {
-//         loadUsers();
-//     }, []);
-
-//     const loadUsers = async () => {
-//         const result = await axios.get("http://localhost:3000/api/v1/orders");
-//         setOrder(result.data.reverse());
-//     };
-
-//     const deleteUser = async id => {
-//         await axios.delete(`http://localhost:3000/api/v1/orders/${id}`);
-//         loadUsers();
-//     };
-//     return (
-//         <div className="container">
-//             <div className="py-4">
-//                 <h1>Quản lý đơn hàng</h1>
-//                 <table class="table border shadow">
-//                     <thead class="headerUser">
-//                         <tr>
-//                             <th scope="col">ID</th>
-//                             <th scope="col">Họ tên</th>
-//                             <th scope="col">Số điện thoại</th>
-//                             <th scope="col">Thanh toán</th>
-//                             <th scope="col">Sản phẩm</th>
-//                             <th scope="col">Trạng thái</th>
-//                             <th>Action</th>
-//                         </tr>
-//                     </thead>
-//                     {orders.map((order, index) => (
-//                         <tbody>
-
-//                             <tr>
-//                                 <th scope="row">{index + 1}</th>
-//                                 <div className="abcd">
-//                                     <img className="imageUser"
-//                                         src={
-//                                             order
-//                                                 ? order.avatar ||
-//                                                 "https://res.cloudinary.com/artwear/image/upload/v1632695686/imageUser/LogoUser_khxsbc.jpg"
-//                                                 : "https://res.cloudinary.com/artwear/image/upload/v1632695686/imageUser/LogoUser_khxsbc.jpg"
-//                                         }
-//                                     />
-//                                     <td>{order.fullname}</td>
-//                                 </div>
-//                                 <td>{order.phone}</td>
-//                                 <td>{order.Payment}</td>
-
-//                                 {order.orderitems.map((item, index) => (
-//                                     <div className="abcd">
-//                                         <img className="imageUser"
-//                                             src={
-//                                                 item.product
-//                                                     ? item.product.ThumbImg ||
-//                                                     "https://icon-library.com/images/null-icon/null-icon-3.jpg"
-//                                                     : "https://icon-library.com/images/null-icon/null-icon-3.jpg"
-//                                             }
-//                                         />
-//                                         <td>{item.product ? item.product.ten : ''}</td>
-//                                     </div>
-//                                 ))}
-
-//                                 <td>{order.status}</td>
-
-
-//                                 <td>
-//                                     <Link
-//                                         class="btn btn-outline-primary mr-2"
-//                                         to={`/MainDrawer/EditOrder/${order._id}`}
-//                                     >
-//                                         Chỉnh sửa
-//                                     </Link>
-//                                     <Button
-//                                         class="btn btn-danger"
-//                                         onClick={() => deleteUser(order._id)}
-//                                     >
-//                                         Xoá
-//                                     </Button>
-//                                 </td>
-//                             </tr>
-//                         </tbody>
-//                     ))}
-//                 </table>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default PageOrder;
-
-
-
-
-
-
-
-
 import React, { useState, useEffect } from "react";
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
@@ -118,6 +12,7 @@ import { Link } from "react-router-dom";
 import "../QLOrders/QLOrder.css";
 import Button from "@mui/material/Button";
 import { format } from "timeago.js";
+import baseURL from "../../assets/common/baseUrl";
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
         backgroundColor: theme.palette.common.black,
@@ -145,12 +40,12 @@ export default function PageOrder() {
     }, []);
 
     const loadUsers = async () => {
-        const result = await axios.get("http://localhost:3000/api/v1/orders");
+        const result = await axios.get(`${baseURL}/orders`);
         setOrder(result.data.reverse());
     };
-
+    // https://artwear.herokuapp.com
     const deleteUser = async id => {
-        await axios.delete(`http://localhost:3000/api/v1/orders/${id}`);
+        await axios.delete(`${baseURL}/orders/${id}`);
         loadUsers();
     };
 

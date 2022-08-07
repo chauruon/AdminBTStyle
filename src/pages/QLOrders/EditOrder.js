@@ -21,6 +21,8 @@ import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
+import baseURL from "../../assets/common/baseUrl";
+
 const EditOrder = () => {
     let history = useHistory();
     const { id } = useParams();
@@ -48,7 +50,7 @@ const EditOrder = () => {
     }, []);
 
     const loadOrder = async () => {
-        const result = await axios.get(`http://localhost:3000/api/v1/orders/${id}`);
+        const result = await axios.get(`${baseURL}/orders/${id}`);
         setOrder(result.data);
         setitemOrder(result.data.orderitems)
     };
@@ -58,7 +60,7 @@ const EditOrder = () => {
 
     const onSubmit = async e => {
         e.preventDefault()
-        fetch(`http://localhost:3000/api/v1/orders/${id}`, {
+        fetch(`${baseURL}/orders/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

@@ -1,6 +1,8 @@
 import "./Conversation.css"
 import { createContext, useReducer, useEffect, useState, useContext } from 'react';
 import axios from "axios";
+import baseURL from "../../assets/common/baseUrl";
+
 export default function Conversation({conversation, currentUser}){
     const [user,setUser]=useState(null)
 
@@ -8,7 +10,7 @@ export default function Conversation({conversation, currentUser}){
         const friendId = conversation.members.find((m) => m !== currentUser._id);
         const getUser = async () => {
           try {
-            const res = await axios("http://localhost:3000/api/v1/users/" + friendId);
+            const res = await axios(`${baseURL}/users/${friendId}`);
             setUser(res.data);
             console.log("abcd",res.data)
           } catch (err) {

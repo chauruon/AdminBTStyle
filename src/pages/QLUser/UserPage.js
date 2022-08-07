@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import "../QLUser/QLUser.css";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
+import baseUrl from "../../assets/common/baseUrl";
+
+
 const UserPage = () => {
     const [users, setUser] = useState([]);
     const [filterUser, setfilterUser] = useState([]);
@@ -31,13 +34,13 @@ const UserPage = () => {
     }, []);
 
     const loadUsers = async () => {
-        const result = await axios.get("http://localhost:3000/api/v1/users/UserAll");
+        const result = await axios.get(`${baseUrl}/users/UserAll`);
         setUser(result.data.reverse());
         setfilterUser(result.data.reverse());
     };
 
     const deleteUser = async id => {
-        await axios.delete(`http://localhost:3000/api/v1/users/deleteUser/${id}`);
+        await axios.delete(`${baseUrl}/users/deleteUser/${id}`);
         loadUsers();
     };
 
