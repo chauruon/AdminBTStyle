@@ -8,3 +8,5 @@ export let api_cloudinary =
   "https://api.cloudinary.com/v1_1/artwear/image/upload";
 
 export default baseURL;
+
+
