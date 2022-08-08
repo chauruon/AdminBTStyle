@@ -121,7 +121,7 @@ export default function RecipeReviewCard(props) {
     });
   };
 
-  React.useEffect(() => {}, [numPage]);
+  React.useEffect(() => { }, [numPage]);
 
   // Fetch product
   React.useEffect(() => {
@@ -160,7 +160,7 @@ export default function RecipeReviewCard(props) {
     <Container sx={{ flexGrow: 1 }}>
       <Breadcrumbs aria-label="breadcrumb">
         <Link underline="hover" color="inherit" href="/">
-          ArtWear
+          BTStyle
         </Link>
         <Typography color="text.primary">Quản lý thông báo</Typography>
         <Link underline="hover" color="inherit" href="/qlsanpham/sanpham">

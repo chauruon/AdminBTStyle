@@ -58,97 +58,97 @@ const drawerWidth = 240;
 const data = [
   {
     id: "1",
-    icon: <Product style={{ color: "#8D6E63" }} />,
+    icon: <Product style={{ color: "#66E8C8" }} />,
     label: "Quản lý sản phẩm",
     data: [
       // {
       //   label: "Tất cả sản phẩm",
-      //   icon: <AllProduct style={{ color: "#8D6E63" }} />,
+      //   icon: <AllProduct style={{ color: "#66E8C8" }} />,
       //   page: "/MainDrawer/qlsanpham/allsanpham",
       // },
       {
         label: "Tất cả sản phẩm",
-        icon: <AllProduct style={{ color: "#8D6E63" }} />,
+        icon: <AllProduct style={{ color: "#66E8C8" }} />,
         page: "/MainDrawer/qlsanpham/sanpham",
       },
       {
         label: "Thêm sản phẩm",
-        icon: <CreateProduct style={{ color: "#8D6E63" }} />,
+        icon: <CreateProduct style={{ color: "#66E8C8" }} />,
         page: "/MainDrawer/qlsanpham/addsanpham",
       },
       {
         label: "Cập nhật sản phẩm",
-        icon: <UpdateProduct style={{ color: "#8D6E63" }} />,
+        icon: <UpdateProduct style={{ color: "#66E8C8" }} />,
         page: "/MainDrawer/qlsanpham/updatesanpham",
       },
     ],
   },
   {
     id: "3",
-    icon: <Customer style={{ color: "#8D6E63" }} />,
+    icon: <Customer style={{ color: "#66E8C8" }} />,
     label: "Khách hàng",
     data: [
       {
         label: "Tất cả khách hàng",
-        icon: <AllCustomer style={{ color: "#8D6E63" }} />,
+        icon: <AllCustomer style={{ color: "#66E8C8" }} />,
         page: "/MainDrawer/UserPage",
       },
     ],
   },
   {
     id: "4",
-    icon: <Order style={{ color: "#8D6E63" }} />,
+    icon: <Order style={{ color: "#66E8C8" }} />,
     label: "Đặt Hàng",
     data: [
       {
         label: "Tất cả đơn hàng",
-        icon: <Order style={{ color: "#8D6E63" }} />,
+        icon: <Order style={{ color: "#66E8C8" }} />,
         page: "/MainDrawer/qlorders/PageOrder",
       },
       // {
       //   label: "Chi tiết đơn hàng",
-      //   icon: <Order style={{ color: "#8D6E63" }} />,
+      //   icon: <Order style={{ color: "#66E8C8" }} />,
       //   page: "/MainDrawer/qlorders/detailsorders",
       // },
     ],
   },
   // {
   //   id: "5",
-  //   icon: <Customer style={{ color: "#8D6E63" }} />,
+  //   icon: <Customer style={{ color: "#66E8C8" }} />,
   //   label: "Quản lý Menu",
   //   data: [
   //     {
   //       label: "Tất cả bảng menu",
-  //       icon: <AllCustomer style={{ color: "#8D6E63" }} />,
+  //       icon: <AllCustomer style={{ color: "#66E8C8" }} />,
   //       page: "/MainDrawer/qlmenu/menu",
   //     },
   //   ],
   // },
   {
     id: "6",
-    icon: <NotificationsIcon style={{ color: "#8D6E63" }} />,
+    icon: <NotificationsIcon style={{ color: "#66E8C8" }} />,
     label: "Quản lý thông báo",
     data: [
       {
         label: "Tất cả thông báo",
-        icon: <AllProduct style={{ color: "#8D6E63" }} />,
+        icon: <AllProduct style={{ color: "#66E8C8" }} />,
         page: "/MainDrawer/qlnotification/notification",
       },
       {
         label: "Thêm thông báo",
-        icon: <CreateProduct style={{ color: "#8D6E63" }} />,
+        icon: <CreateProduct style={{ color: "#66E8C8" }} />,
         page: "/MainDrawer/qlnotification/addnotification",
       },
     ],
   },
   {
     id: "7",
-    icon: <Chat style={{ color: "#8D6E63" }} />,
+    icon: <Chat style={{ color: "#66E8C8" }} />,
     label: "Quản lý Chat",
     data: [
       {
         label: "Trò chuyện",
-        icon: <AllChat style={{ color: "#8D6E63" }} />,
+        icon: <AllChat style={{ color: "#66E8C8" }} />,
         page: "/MainDrawer/Messenger",
       },
     ],
@@ -157,17 +157,17 @@ const data = [
 
   {
     id: "8",
-    icon: <NotificationsIcon style={{ color: "#8D6E63" }} />,
+    icon: <NotificationsIcon style={{ color: "#66E8C8" }} />,
     label: "Thống kê",
     data: [
       {
         label: "Thống kê đơn hàng",
-        icon: <AllProduct style={{ color: "#8D6E63" }} />,
+        icon: <AllProduct style={{ color: "#66E8C8" }} />,
         page: "/MainDrawer/statistic/statistic_order",
       },
       {
         label: "Thống kê người dùng",
-        icon: <CreateProduct style={{ color: "#8D6E63" }} />,
+        icon: <CreateProduct style={{ color: "#66E8C8" }} />,
         page: "/MainDrawer/statistic/statistic_user",
       },
     ],
@@ -177,19 +177,19 @@ const data = [
 const dataProfile = [
   {
     id: "1",
-    icon: <Customer style={{ color: "#8D6E63" }} />,
+    icon: <Customer style={{ color: "#66E8C8" }} />,
     label: "Thông tin cá nhân",
     link: "/Admin",
   },
   {
     id: "2",
-    icon: <IconSetting style={{ color: "#8D6E63" }} />,
+    icon: <IconSetting style={{ color: "#66E8C8" }} />,
     label: "Cài đặt",
     link: "/login",
   },
   {
     id: "3",
-    icon: <IconLogOut style={{ color: "#8D6E63" }} />,
+    icon: <IconLogOut style={{ color: "#66E8C8" }} />,
     labelDangXuat: "Đăng xuất",
   },
 ];
@@ -357,9 +357,9 @@ function MainDrawer(props) {
   const drawer = (
     //Logo ArtWear(ben trai man hinh)
     <div>
-      <div style={{ height: "0%", marginLeft: "30%",backgroundColor:"#5D8C92"}}>
+      <div style={{ height: "0%", marginLeft: "30%", backgroundColor: "#5D8C92" }}>
         <img
-          style={{ height: "64px", width: "86px",backgroundColor:"#5D8C92" }}
+          style={{ height: "64px", width: "86px", backgroundColor: "#5D8C92" }}
           src={logo}
         />
       </div>
@@ -460,7 +460,7 @@ function MainDrawer(props) {
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
-          backgroundColor: "#8D6E63",
+          backgroundColor: "#66E8C8",
         }}
       >
         <Toolbar>

@@ -10,7 +10,7 @@ const ErrorErrorURLMain = () => (
     <div className="textErrorMain">
       <h1>404 - Not Found </h1>
       <h2>Rất tiếc! File rỗng rồi   </h2>
-      <h3>Kiểm tra lại đường dẫn trong trang chủ ArtWear hoặc bấm vào thanh menu bên trái.</h3>
+      <h3>Kiểm tra lại đường dẫn trong trang chủ BTStyle hoặc bấm vào thanh menu bên trái.</h3>
     </div>
   </div>
 );

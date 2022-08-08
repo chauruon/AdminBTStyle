@@ -73,7 +73,7 @@ const DetailsProduct = (props) => {
       setColors([]);
     };
   }, [images]);
-  
+
   React.useEffect(() => {
     if (images) {
       const indexOfColor = images.findIndex((item) => {
@@ -97,7 +97,7 @@ const DetailsProduct = (props) => {
         <Grid item xs={8} style={{}}>
           <Breadcrumbs aria-label="breadcrumb">
             <Link underline="hover" color="inherit" href="/">
-              ArtWear
+              BTStyle
             </Link>
             <Typography color="text.primary">Quản lý sản phẩm</Typography>
             <Link underline="hover" color="inherit" href="/qlsanpham/sanpham">
