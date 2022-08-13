@@ -189,7 +189,7 @@ const EditOrder = () => {
 
                                 </div>
                             ))}
-                            <button className="userUpdateButton" onClick={e => onSubmit(e)}>Cập nhật đơn hàng</button>
+                            <button className="userUpdateButton" onClick={e => onSubmit(e)}>Đơn hàng</button>
                         </div>
                     </form>
                 </div>
@@ -197,5 +197,7 @@ const EditOrder = () => {
         </div>
     );
 }
+
+
 
 export default EditOrder;
