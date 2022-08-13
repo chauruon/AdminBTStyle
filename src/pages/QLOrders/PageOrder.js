@@ -51,14 +51,14 @@ export default function PageOrder() {
 
     let a = ""
     useEffect(() => {
-       orders.filter(item => {
-          if (item.status == "2") {
-           a="cho thanh toan"
-          } else {
-            console.log("Ko tim thay order")
-          }
+        orders.filter(item => {
+            if (item.status == "2") {
+                a = "cho thanh toan"
+            } else {
+                console.log("Ko tim thay order")
+            }
         })
-      }, [orders]);
+    }, [orders]);
 
     return (
         <TableContainer component={Paper}>
@@ -94,7 +94,7 @@ export default function PageOrder() {
                                 <Link
                                     class="btn btn-outline-primary mr-2"
                                     to={`/MainDrawer/EditOrder/${order._id}`}>
-                                    Chỉnh sửa
+                                    Chi tiết
                                 </Link>
                             </StyledTableCell>
 

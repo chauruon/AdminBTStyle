@@ -17,8 +17,8 @@ const Auth = ({ authRoute }) => {
 		<div className='landing'>
 			<div className='dark-overlay'>
 				<div className='landing-inner'>
-					<h1>Art Wear</h1>
-					<h4>Shop easy shop happy</h4>
+					<h1>Welcome, BT Style  </h1>
+					<h4>Shopping made easy </h4>
 					{body}
 				</div>
 			</div>

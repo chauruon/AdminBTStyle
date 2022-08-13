@@ -221,7 +221,7 @@ const InsertNotificationPage = () => {
     <Container>
       <Breadcrumbs aria-label="breadcrumb">
         <Link underline="hover" color="inherit" href="/">
-          ARTWEAR
+          BTStyle
         </Link>
         <Link
           underline="hover"
@@ -282,7 +282,7 @@ const InsertNotificationPage = () => {
             />
           </div> */}
 
-          <Search style={{marginTop: 20}}>
+          <Search style={{ marginTop: 20 }}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>

@@ -9,7 +9,7 @@ const ErrorLogin = () => (
     </div>
     <div className="textError">
       <h1>404 - Not Found </h1>
-      <h2>Rất tiếc! bạn chưa đăng nhập vào ArtWear </h2>
+      <h2>Rất tiếc! bạn chưa đăng nhập vào BTStyle </h2>
       <Link to="/login">
         <h3>Quay về đăng nhập</h3>
       </Link>

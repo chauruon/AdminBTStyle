@@ -43,7 +43,7 @@ function StatisticOrder() {
       data: totalPricesWaitForPay,
     },
     {
-      name: "đang chờ giao hàng",
+      name: "Đang chờ giao hàng",
       data: totalPricesShipping,
     },
     {
@@ -55,11 +55,11 @@ function StatisticOrder() {
   return (
     <Container maxWidth="xl">
       <Box sx={{ pb: 5, }}>
-        <Typography variant="h4" style={{ fontWeight: 'bold' }} >Chào mừng đến với Thống kê ArtWear</Typography>
+        <Typography variant="h4" style={{ fontWeight: 'bold' }} >Chào mừng đến với Thống kê BT Style</Typography>
       </Box>
       <Grid sm={6} md={8} >
         <Card>
-          <CardHeader title="Bảng thống kê" subheader="Trong năm 2021" />
+          <CardHeader title="Bảng thống kê" subheader="Trong năm 2022" />
           <Box sx={{ p: 3, pb: 1 }} dir="ltr">
             <Chart options={options} series={series} type="line" width="800" height={400} />
           </Box>

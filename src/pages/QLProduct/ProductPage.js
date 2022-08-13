@@ -172,7 +172,7 @@ export default function RecipeReviewCard(props) {
     <Container sx={{ flexGrow: 1 }}>
       <Breadcrumbs aria-label="breadcrumb">
         <Link underline="hover" color="inherit" href="/">
-          ArtWear
+          BTStyle
         </Link>
         <Typography color="text.primary">Quản lý sản phẩm</Typography>
         <Link underline="hover" color="inherit" href="/qlsanpham/sanpham">
